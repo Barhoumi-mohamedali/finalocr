@@ -1,0 +1,230 @@
+
+        <div class="header bg-primary pb-6">
+            <div class="container-fluid">
+                <div class="header-body">
+                    <div class="row align-items-center py-4">
+                        <div class="col-lg-6 col-7">
+                           <!-- <h6 class="h2 text-white d-inline-block mb-0">Extract New Document</h6>-->
+                            <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                                <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                                    <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                                    <li class="breadcrumb-item"><a style="cursor: pointer;"  routerLinkActive="active" [routerLink]="['../listDocs']" >Documents</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">New Document</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="col-lg-6 col-5 text-right"><!--<a href="#" class="btn btn-sm btn-neutral">New</a> <a href="#" class="btn btn-sm btn-neutral">Filters</a>--></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid mt--6">
+            <div class="card mb-4"><div class="card-header"><h3 class="mb-0">Extract New Document</h3></div>
+    <div class="card-body">
+            <div class="row card-wrapper">
+                <div class="alert alert-danger" *ngIf="error">
+                    <p>{{error}}</p>
+                </div>
+                <div class="alert alert-success" *ngIf="success">
+                    <p>{{success}}</p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="mb-0">Document Data</h3>
+                            </div>
+                            <div class="card-body">
+
+                                <div class="row">
+                                        <!--<form [formGroup]="createForm" (ngSubmit)="onCreate()">  -->   
+                                            <form [formGroup]="createForm"  (ngSubmit)="OnExtract()">
+                                            <div class="form-group">
+                                            <input placeholder="Document Image" type="file" class="form-control form-control-lg"  name="docImage" id="docImage" formControlName="docImage" (change)="selectFile($event)" (change)="imagePreview($event)" >  
+                                                  
+                                            </div>
+                                            <div class="form-group">
+                
+                                                <select 
+                                                [(ngModel)]="selectedValue" 
+                                                class="form-control" 
+                                                id="modelType"
+                                                name="modelType"
+                                                formControlName="modelType">
+                                                    <option value="Select the Document Type" disabled selected>Select the Document Type</option>
+                                                    <option *ngFor="let c of modelTypes" [ngValue]="c">{{c}}</option>
+                                                </select>
+                                                
+                                                <div
+                                                *ngIf="!createForm.get('modelType')?.valid && (createForm.get('modelType')?.dirty ||createForm.get('modelType')?.touched)">
+                                                        <div [hidden]="!createForm.get('modelType').errors?.['required']">
+                                                        type is required
+                                                        </div>
+                                                        <div [hidden]="createForm.get('modelType').value!='Select the Document Type'">
+                                                            type is required
+                                                            </div>
+                                                    <div [hidden]="!createForm.get('modelType').errors?.['minlength']">
+                                                        Min Length is 3
+                                                    </div>
+                                                        </div>
+                                                </div>
+                                            <div class="form-group">
+                                                <input 
+                                                placeholder="Title"
+                                                type="text"
+                                                id="title"
+                                                name="title"
+                                                formControlName="title"
+                                                class="form-control"
+                                                >
+                                                <div
+                                        *ngIf="!createForm.get('title')?.valid && (createForm.get('title')?.dirty ||createForm.get('title')?.touched)">
+                                                <div [hidden]="!createForm.get('title').errors?.['required']">
+                                                First Name is required
+                                                </div>
+                                            <div [hidden]="!createForm.get('title').errors?.['minlength']">
+                                                Min Length is 3
+                                            </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <input 
+                                                placeholder="Description"
+                                                type="text"
+                                                id="description"
+                                                name="description"
+                                                formControlName="description"
+                                                class="form-control"
+                                                >
+                                                <div
+                                        *ngIf="!createForm.get('description')?.valid && (createForm.get('description')?.dirty ||createForm.get('description')?.touched)">
+                                            <div [hidden]="!createForm.get('description').errors?.['minlength']">
+                                                Min Length is 10
+                                            </div>
+                                                </div>
+                                            </div>
+
+
+                                            
+
+                                            
+                                            <div class="form-group">
+                                                <input 
+                                                type="hidden"
+                                                id="owner"
+                                                name="owner"
+                                                formControlName="owner"
+                                                value="{{user.user_id}}"
+                                                class="form-control"
+                                                >
+                                            
+                                                    
+                                                <div
+                                                *ngIf="!createForm.get('title')?.valid && (createForm.get('owner')?.dirty ||createForm.get('owner')?.touched)">
+                                                    <div [hidden]="!createForm.get('owner').errors?.['required']">
+                                                        First Name is required
+                                                    </div>
+                                                    </div>
+                                            </div>
+
+                                            <button class="btn btn-success"  [disabled]="!createForm.valid"> Extract the Document</button>
+
+                                            
+                                        </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card-wrapper">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="mb-0">The Document</h3>
+                            </div>
+                            <div class="card-body" width="500" height="600" style="border: 3px dashed #1E90FF ; background-image:url('../../../assets/img/imgback.png');">
+                                <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
+                                <div><img [src]="url" *ngIf="url" ></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div></div>
+        </div>
+        <div class="container-fluid mt--12" *ngIf="extract">
+            <div class="row">
+                
+                <div class="col-lg-12">
+                    <div class="card-wrapper">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-0">Verify Data</h3>
+            </div>
+            <div class="card-body">
+                <hr>
+                <form class="needs-validation was-validated" novalidate="" [formGroup]="verifyForm" (ngSubmit)="onVerify()">
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3"><label class="form-control-label" for="validationCustom01">First name</label> <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="{{pass.names}}" formControlName="names" required="">
+                            <div class="valid-feedback"></div>
+                        </div>
+                        <div class="col-md-4 mb-3"><label class="form-control-label" for="validationCustom02">Last name</label> <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="{{pass.surname}}" formControlName="surname" required="">
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <div class="col-md-4 mb-3"><label class="form-control-label" for="validationCustomUsername">Nationality</label> <input type="text" class="form-control" id="validationCustomUsername" placeholder="Nationality" formControlName="nationality" aria-describedby="inputGroupPrepend" value="{{pass.nationality}}" required="">
+                            <div class="invalid-feedback">Please valid a Nationality.</div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-2 mb-3"><label class="form-control-label" for="validationCustom03">Type</label> <input type="text" class="form-control" id="validationCustom03" placeholder="Type" value="{{pass.type}}" formControlName="type" required="">
+                            <div class="invalid-feedback">Please provide a valid Type.</div>
+                        </div>
+                        <div class="col-md-2 mb-3"><label class="form-control-label" for="validationCustom04">Sex</label> <input type="text" class="form-control" id="validationCustom04" placeholder="Sex" value="{{pass.sex}}" formControlName="sex" required="">
+                            <div class="invalid-feedback">Please provide a valid Sex</div>
+                        </div>
+                        <div class="col-md-4 mb-3"><label class="form-control-label" for="validationCustom05">Date of Birth</label> <input type="text" class="form-control" id="validationCustom05" placeholder="Date of Birth" formControlName="date_of_birth" value="{{pass.date_of_birth}}" required="">
+                            <div class="invalid-feedback">Please provide a valid Date of Birth</div>
+                        </div>
+                        <div class="col-md-4 mb-3"><label class="form-control-label" for="validationCustom05">Experation Date</label> <input type="text" class="form-control" id="validationCustom05" placeholder="Experation Date" formControlName="expiration_date" value="{{pass.expiration_date}}" required="">
+                            <div class="invalid-feedback">Please provide a valid Experation Date<</div>
+                        </div>
+                    </div>
+                    <button class="btn btn-success" type="submit">Verify Data</button>
+                </form>
+            </div>
+        </div></div></div></div></div>
+        <div class="container-fluid mt--12" *ngIf="extractVitale">
+            <div class="row">
+                
+                <div class="col-lg-12">
+                    <div class="card-wrapper">
+        <div class="card">
+            <div class="card-header">
+                <h3 class="mb-0">Verify Data</h3>
+            </div>
+            <div class="card-body">
+                <hr>
+                <form class="needs-validation was-validated" novalidate="" [formGroup]="verifyVitaleForm" (ngSubmit)="onVerifyVitale()">
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3"><label class="form-control-label" for="validationCustom01">Full Name</label> <input type="text" class="form-control" id="validationCustom01" placeholder="Full Name" value="{{vitale.full_name}}" formControlName="full_name" required="">
+                            <div class="valid-feedback"></div>
+                        </div>
+                        <div class="col-md-4 mb-3"><label class="form-control-label" for="validationCustom02">Emise Date</label> <input type="text" class="form-control" id="validationCustom02" placeholder="Emise Date" value="{{vitale.emise_date}}" formControlName="emise_date" required="">
+                            <div class="valid-feedback">Looks good!</div>
+                        </div>
+                        <div class="col-md-4 mb-3"><label class="form-control-label" for="validationCustomUsername">Gender</label> <input type="text" class="form-control" id="validationCustomUsername" placeholder="Gender" formControlName="gender" aria-describedby="inputGroupPrepend" value="{{vitale.gender}}" required="">
+                            <div class="invalid-feedback">Please valid a Nationality.</div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-md-2 mb-3"><label class="form-control-label" for="validationCustom03">Security Key</label> <input type="text" class="form-control" id="validationCustom03" placeholder="Security Key" value="{{vitale.cle_de_securite}}" formControlName="cle_de_securite" required="">
+                            <div class="invalid-feedback">Please provide a valid Type.</div>
+                        </div>
+                        <div class="col-md-4 mb-3"><label class="form-control-label" for="validationCustom05">Date of Birth</label> <input type="text" class="form-control" id="validationCustom05" placeholder="Date of Birth" formControlName="date_of_birth" value="{{vitale.date_of_birth}}" required="">
+                            <div class="invalid-feedback">Please provide a valid Date of Birth</div>
+                        </div>
+                        
+                    </div>
+                    <button class="btn btn-success" type="submit">Verify Data</button>
+                </form>
+            </div>
+        </div></div></div></div></div>

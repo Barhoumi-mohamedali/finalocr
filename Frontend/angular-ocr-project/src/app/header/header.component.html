@@ -1,0 +1,91 @@
+<header class="header-global">
+    <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg headroom py-lg-3 px-lg-6 navbar-light navbar-theme-primary">
+        <div class="container"><a class="navbar-brand @@logo_classes" href="../../index.html"><img class="navbar-brand-dark common" src="../../../assets/front/assets/img/brand/pixocr logo.png" style="height: 80px;" width="170"  alt="Logo light"> <img class="navbar-brand-light common" src="../../../assets/front/assets/img/brand/pixocr logo.png" style="height: 80px;" width="170"  alt="Logo dark"></a>
+            <div class="navbar-collapse collapse" id="navbar_global">
+                <div class="navbar-collapse-header">
+                    <div class="row">
+                        <div class="col-6 collapse-brand"><a href="../../index.html"><img src="../../../assets/front/assets/img/brand/pixocr logo.png"  style="height: 80px;" width="170" alt="Logo Impact"></a></div>
+                        <div class="col-6 collapse-close"><a href="#navbar_global" role="button" class="fas fa-times" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation"></a></div>
+                    </div>
+                </div>
+
+                <ul class="navbar-nav navbar-nav-hover justify-content-center">
+                    <li class="nav-item"><a href="../../index.html" class="nav-link">About Us</a></li>
+                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" aria-expanded="false" data-toggle="dropdown"><span class="nav-link-inner-text mr-1">Our Services</span> <i class="fas fa-angle-down nav-link-arrow"></i></a>
+                        <div class="dropdown-menu dropdown-megamenu p-3 p-lg-4">
+                            <div class="row">
+                                <div class="col-6 col-lg-4">
+                                    <h6 class="d-block mb-3 text-primary">Services</h6>
+                                    <ul class="list-style-none mb-4">
+                                        <li class="mb-2 megamenu-item"><a class="megamenu-link" href="index.html">OCR</a></li>
+                                        <li class="mb-2 megamenu-item"><a class="megamenu-link" href="index-2.html">Credit scoring</a></li>
+                                        <li class="mb-2 megamenu-item"><a class="megamenu-link" href="about.html">Recomendation system</a></li>
+                                        
+                                    </ul>
+                                    
+                                </div>
+                                <div class="col-6 col-lg-4">
+ 				<h6 class="d-block mb-3 text-primary">Blog</h6>
+                                    <ul class="list-style-none mb-4">
+                                        <li class="mb-2 megamenu-item"><a class="megamenu-link" style="cursor: pointer;"  routerLinkActive="active" [routerLink]="['/blog']" *ngIf="!isAuthenticated">Blog</a></li>
+                                      <!---  <li class="mb-2 megamenu-item"><a class="megamenu-link" href="blog-post.html">Blog post</a></li>-->
+                                    </ul>
+                                    <h6 class="d-block mb-3 text-primary">Support</h6>
+                                    <ul class="list-style-none mb-4">
+                                        <li class="mb-2 megamenu-item"><a class="megamenu-link" href="support.html">Support center</a></li>
+                                       
+                                    </ul>
+                                   
+                                   
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                  <!--  <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" aria-expanded="false" data-toggle="dropdown"><span class="nav-link-inner-text mr-1">Contact Us</span> <i class="fas fa-angle-down nav-link-arrow"></i></a>
+                        <div class="dropdown-menu dropdown-megamenu p-3 p-lg-4">
+                            <div class="row">
+                                <div class="col-6 col-lg-4">
+                                    <h6 class="d-block mb-3 text-primary">Dashboards</h6>
+                                    <ul class="list-style-none mb-4">
+                                        <li class="mb-2 megamenu-item"><a class="megamenu-link" href="../../dashboard/pages/dashboards/dashboard.html">Dashboard</a></li>
+                                        <li class="mb-2 megamenu-item"><a class="megamenu-link" href="../../dashboard/pages/dashboards/alternative.html">Alternative</a></li>
+                                    </ul>
+                                    <h6 class="d-block mb-3 text-primary">Examples</h6>
+                                    <ul class="list-style-none">
+                                        <li class="mb-2 megamenu-item"><a class="megamenu-link" href="../../dashboard/pages/examples/pricing.html">Pricing</a></li>
+                                        <li class="mb-2 megamenu-item"><a class="megamenu-link" href="../../dashboard/pages/examples/login.html">Login</a></li>
+                                        <li class="mb-2 megamenu-item"><a class="megamenu-link" href="../../dashboard/pages/examples/register.html">Register</a></li>
+                                        <li class="mb-2 megamenu-item"><a class="megamenu-link" href="../../dashboard/pages/examples/profile.html">Profile</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-6 col-lg-4">
+                                    <h6 class="d-block mb-3 text-primary">Maps</h6>
+                                    <ul class="list-style-none mb-4">
+                                        <li class="mb-2 megamenu-item"><a class="megamenu-link" href="../../dashboard/pages/maps/google.html">Google</a></li>
+                                        <li class="mb-2 megamenu-item"><a class="megamenu-link" href="../../dashboard/pages/maps/vector.html">Vector</a></li>
+                                    </ul>
+                                    <h6 class="d-block mb-3 text-primary">Plugins</h6>
+                                    <ul class="list-style-none mb-4">
+                                        <li class="mb-2 megamenu-item"><a class="megamenu-link" href="../../dashboard/pages/widgets.html">Widgets</a></li>
+                                        <li class="mb-2 megamenu-item"><a class="megamenu-link" href="../../dashboard/pages/charts.html">Charts</a></li>
+                                        <li class="mb-2 megamenu-item"><a class="megamenu-link" href="../../dashboard/pages/calendar.html">Calendars</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-6 col-lg-4">
+                                    <h6 class="d-block mb-3 text-primary">About Us</h6>
+                                    <ul class="list-style-none mb-4">
+                                      
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>-->
+                
+                </ul>
+            </div>
+            <div class="d-none d-lg-block @@cta_button_classes"> <a class="btn btn-md btn-secondary animate-up-2"   style="cursor: pointer;"  routerLinkActive="active" [routerLink]="['/auth']" *ngIf="!isAuthenticated" ><i class="ni ni-circle-08 mr-3" ></i>Login</a></div>
+            <div class="d-none d-lg-block @@cta_button_classes"> <a class="btn btn-md btn-secondary animate-up-2"   style="cursor: pointer;"   *ngIf="isAuthenticated" (click)="onLogout()"><i class="ni ni-circle-08 mr-3"></i>Logout</a></div>
+        </div>
+    </nav>
+</header>

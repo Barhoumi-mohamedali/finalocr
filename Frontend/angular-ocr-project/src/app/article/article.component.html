@@ -1,0 +1,198 @@
+
+    <header class="header-global">
+        <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg headroom py-lg-3 px-lg-6 navbar-light navbar-theme-primary">
+            <div class="container"><a class="navbar-brand @@logo_classes" href="../../index.html"><img class="navbar-brand-dark common" src="../../../assets/front/assets/img/brand/pixocr logo.png" style="height: 80px;" width="170"  alt="Logo light"> <img class="navbar-brand-light common" src="../../../assets/front/assets/img/brand/pixocr logo.png" style="height: 80px;" width="170"  alt="Logo dark"></a>
+                <div class="navbar-collapse collapse" id="navbar_global">
+                    <div class="navbar-collapse-header">
+                        <div class="row">
+                            <div class="col-6 collapse-brand"><a href="../../index.html"><img src="../../../assets/front/assets/img/brand/pixocr logo.png"  style="height: 80px;" width="170" alt="Logo Impact"></a></div>
+                            <div class="col-6 collapse-close"><a href="#navbar_global" role="button" class="fas fa-times" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation"></a></div>
+                        </div>
+                    </div>
+    
+                    <ul class="navbar-nav navbar-nav-hover justify-content-center">
+                        <li class="nav-item"><a href="../../index.html" class="nav-link">About Us</a></li>
+                        <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" aria-expanded="false" data-toggle="dropdown"><span class="nav-link-inner-text mr-1">Our Services</span> <i class="fas fa-angle-down nav-link-arrow"></i></a>
+                            <div class="dropdown-menu dropdown-megamenu p-3 p-lg-4">
+                                <div class="row">
+                                    <div class="col-6 col-lg-4">
+                                        <h6 class="d-block mb-3 text-primary">Services</h6>
+                                        <ul class="list-style-none mb-4">
+                                            <li class="mb-2 megamenu-item"><a class="megamenu-link" href="index.html">OCR</a></li>
+                                            <li class="mb-2 megamenu-item"><a class="megamenu-link" href="index-2.html">Credit scoring</a></li>
+                                            <li class="mb-2 megamenu-item"><a class="megamenu-link" href="about.html">Recomendation system</a></li>
+                                            
+                                        </ul>
+                                        
+                                    </div>
+                                    <div class="col-6 col-lg-4">
+                     <h6 class="d-block mb-3 text-primary">Blog</h6>
+                                        <ul class="list-style-none mb-4">
+                                            <li class="mb-2 megamenu-item"><a class="megamenu-link" style="cursor: pointer;"  routerLinkActive="active" [routerLink]="['/blog']" *ngIf="!isAuthenticated">Blog</a></li>
+                                          <!---  <li class="mb-2 megamenu-item"><a class="megamenu-link" href="blog-post.html">Blog post</a></li>-->
+                                        </ul>
+                                        <h6 class="d-block mb-3 text-primary">Support</h6>
+                                        <ul class="list-style-none mb-4">
+                                            <li class="mb-2 megamenu-item"><a class="megamenu-link" href="support.html">Support center</a></li>
+                                           
+                                        </ul>
+                                       
+                                       
+                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" aria-expanded="false" data-toggle="dropdown"><span class="nav-link-inner-text mr-1">Contact Us</span> <i class="fas fa-angle-down nav-link-arrow"></i></a>
+                            <div class="dropdown-menu dropdown-megamenu p-3 p-lg-4">
+                                <div class="row">
+                                    <div class="col-6 col-lg-4">
+                                        <h6 class="d-block mb-3 text-primary">Dashboards</h6>
+                                        <ul class="list-style-none mb-4">
+                                            <li class="mb-2 megamenu-item"><a class="megamenu-link" href="../../dashboard/pages/dashboards/dashboard.html">Dashboard</a></li>
+                                            <li class="mb-2 megamenu-item"><a class="megamenu-link" href="../../dashboard/pages/dashboards/alternative.html">Alternative</a></li>
+                                        </ul>
+                                        <h6 class="d-block mb-3 text-primary">Examples</h6>
+                                        <ul class="list-style-none">
+                                            <li class="mb-2 megamenu-item"><a class="megamenu-link" href="../../dashboard/pages/examples/pricing.html">Pricing</a></li>
+                                            <li class="mb-2 megamenu-item"><a class="megamenu-link" href="../../dashboard/pages/examples/login.html">Login</a></li>
+                                            <li class="mb-2 megamenu-item"><a class="megamenu-link" href="../../dashboard/pages/examples/register.html">Register</a></li>
+                                            <li class="mb-2 megamenu-item"><a class="megamenu-link" href="../../dashboard/pages/examples/profile.html">Profile</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6 col-lg-4">
+                                        <h6 class="d-block mb-3 text-primary">Maps</h6>
+                                        <ul class="list-style-none mb-4">
+                                            <li class="mb-2 megamenu-item"><a class="megamenu-link" href="../../dashboard/pages/maps/google.html">Google</a></li>
+                                            <li class="mb-2 megamenu-item"><a class="megamenu-link" href="../../dashboard/pages/maps/vector.html">Vector</a></li>
+                                        </ul>
+                                        <h6 class="d-block mb-3 text-primary">Plugins</h6>
+                                        <ul class="list-style-none mb-4">
+                                            <li class="mb-2 megamenu-item"><a class="megamenu-link" href="../../dashboard/pages/widgets.html">Widgets</a></li>
+                                            <li class="mb-2 megamenu-item"><a class="megamenu-link" href="../../dashboard/pages/charts.html">Charts</a></li>
+                                            <li class="mb-2 megamenu-item"><a class="megamenu-link" href="../../dashboard/pages/calendar.html">Calendars</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-6 col-lg-4">
+                                        <h6 class="d-block mb-3 text-primary">About Us</h6>
+                                        <ul class="list-style-none mb-4">
+                                          
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    
+                    </ul>
+                </div>
+                <div class="d-none d-lg-block @@cta_button_classes"> <a class="btn btn-md btn-secondary animate-up-2"   style="cursor: pointer;"  routerLinkActive="active" [routerLink]="['/auth']" *ngIf="!isAuthenticated" ><i class="ni ni-circle-08 mr-3" ></i>Login</a></div>
+                <div class="d-none d-lg-block @@cta_button_classes"> <a class="btn btn-md btn-secondary animate-up-2"   style="cursor: pointer;"   *ngIf="isAuthenticated" (click)="onLogout()"><i class="ni ni-circle-08 mr-3"></i>Logout</a></div>
+            </div>
+        </nav>
+    </header>
+    <div class="preloader bg-soft flex-column justify-content-center align-items-center">
+        <div class="loader-element"><span class="loader-animated-dot"></span> <img src="../../../assets/front/assets/img/brand/pixocr logo.png" height="40" alt="Impact logo"></div>
+    </div>
+   
+    
+    <section class="section section-lg">
+        <div class="container">
+            
+             <div class="row mb-lg" *ngFor="let item of articles;let i=index"> 
+                <div class="col-12 col-lg-6" >
+                    <div class="customer-testimonial d-flex " *ngIf="i % 2 == 0"><img src="../../../assets/front/assets/img/team/profile-picture-1.jpg" class="image image-sm mr-3 rounded-circle shadow" alt="">
+                        <div class="content bg-soft shadow-soft border border-light rounded position-relative p-4">
+                            <div class="d-flex mb-4">
+                                <a style="font-size: 30px ;font-weight: bold ;color:black">{{item.title}}</a> 
+                            </div>
+                            <p class="mt-2"> {{item.content}}</p>
+                            <a class="h6">- created at :<small class="ml-0 ml-md-2">{{item.created_at}}</small></a><br>
+                            
+
+                            <ng-template [ngIf]="isAuthenticated ">
+                            <a style="margin: 20px;"><input type="text" class="form-control" placeholder="Add comment" id={{item.id}} name="body" [(ngModel)]="body" (keyup.enter)="addcomment(i,item.id)" ></a>
+                            </ng-template>
+                            
+                            <div *ngFor="let comment of item.comments"  > 
+                                <p>{{comment.body}}</p>
+                                
+
+                            </div>
+                         
+
+
+
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-12 col-lg-6 pt-lg-6" >
+                   <div class="customer-testimonial d-flex " *ngIf="i % 2 != 0"><img src="../../../assets/front/assets/img/team/profile-picture-4.jpg" class="image image-sm mr-3 rounded-circle shadow" alt="">
+                        <div class="content bg-soft shadow-soft border border-light rounded position-relative p-4">
+                            <div class="d-flex mb-4">
+                                <a style="font-size: 30px ;font-weight: bold ;color:black">{{item.title}}</a> 
+
+                            </div>
+                            <p class="mt-2"> {{item.content}}</p>
+                            <a class="h6">- created at :<small class="ml-0 ml-md-2">{{item.created_at}}</small></a><br>
+
+                            <ng-template [ngIf]="isAuthenticated ">
+                                <a style="margin: 20px;"><input type="text" class="form-control" placeholder="Ajouter un commentaire" id={{item.id}} name="body" [(ngModel)]="body" (keyup.enter)="addcomment(i,item.id)" ></a>
+                                </ng-template>
+                             <div *ngFor="let comment of item.comments" > 
+                                <p>{{comment.body}}</p>
+                                
+
+                            </div>
+
+
+                        </div>
+                    </div> 
+                   
+                </div>
+            </div>
+            <div class="row">
+               <!-- <div class="col text-center"><a href="testimonials.html" class="btn btn-primary animate-up-2"><span class="mr-2"><i class="fas fa-book-open"></i></span> See all stories</a></div>-->
+            </div>
+        </div>
+    </section>
+  <!--  <section class="section section-lg pb-5 bg-soft">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="mb-4">Faster growth starts with Rocket</h2>
+                    <p class="lead mb-5">Join over <span class="font-weight-bolder">300,000+</span> users</p><a href="#" class="icon icon-lg text-gray mr-3"><i class="fab fa-mailchimp"></i> </a><a href="#" class="icon icon-lg text-gray mr-3"><i class="fab fa-cpanel"></i> </a><a href="#" class="icon icon-lg text-gray mr-3"><i class="fab fa-dhl"></i> </a><a href="#" class="icon icon-lg text-gray mr-3"><i class="fab fa-github-alt"></i> </a><a href="#" class="icon icon-lg text-gray mr-3"><i class="fab fa-aws"></i> </a><a href="#" class="icon icon-lg text-gray"><i class="fab fa-node"></i></a>
+                </div>
+                <div class="col-12 text-center"> <button class="btn btn-secondary animate-up-2" data-toggle="modal" data-target=".pricing-modal"><span class="mr-2"><i class="fas fa-hand-pointer"></i></span>Start 30-days trial</button></div>
+            </div>
+        </div>
+    </section> -->
+    <div id="pricing-modal" class="modal fade pricing-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content py-4">
+                <div class="px-3">
+                    <div class="col-12 d-flex justify-content-end d-lg-none"><i class="fas fa-times" data-dismiss="modal" aria-label="Close"></i></div>
+                </div>
+                <div class="modal-header text-center text-black">
+                    <div class="col-12">
+                        <h4 class="px-lg-6">Our 30-days trial gives you full access to all tools and features of your chosen plan.</h4>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 text-left">
+                            <div class="form-check card border-light p-3"><input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"> <label class="form-check-label" for="exampleRadios1"><span class="h6 text-black d-block">Free</span> <span class="small text-gray">30 days for free, then $99/mo</span> <span class="text-gray mt-3 d-block p">Suits freelance marketers and solopreneurs. Get full access to Ahrefs' core tools and features with enough data to do SEO for your personal projects.</span></label></div>
+                        </div>
+                        <div class="col-12 col-lg-6 text-left">
+                            <div class="form-check card border-light p-3"><input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" checked="checked"> <label class="form-check-label" for="exampleRadios2"><span class="h6 text-black d-block">Premium</span> <span class="small text-gray">200$/mo</span> <span class="text-gray mt-3 d-block p">Perfect for SEO consultants and in-house marketers. Get everything in Lite with more features and increased data limits to research a large number of websites.</span></label></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 text-center">
+                    <div class="col text-gray"><a href="checkout.html" class="btn btn-primary mb-4">Continue</a>
+                        <p class="small mb-0">You can upgrade, downgrade, or cancel your subscription anytime.<br>No contracts, no hidden charges.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

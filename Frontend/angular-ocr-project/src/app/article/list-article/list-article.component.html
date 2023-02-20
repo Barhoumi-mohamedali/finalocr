@@ -1,0 +1,62 @@
+<section class="section section-lg">
+    <div class="container">
+        
+         <div class="row mb-lg" *ngFor="let item of articles;let i=index"> 
+            <div class="col-12 col-lg-6" >
+                <div class="customer-testimonial d-flex " *ngIf="i % 2 == 0"><img src="../../../assets/front/assets/img/team/profile-picture-1.jpg" class="image image-sm mr-3 rounded-circle shadow" alt="">
+                    <div class="content bg-soft shadow-soft border border-light rounded position-relative p-4">
+                        <div class="d-flex mb-4">
+                            <a style="font-size: 30px ;font-weight: bold ;color:black">{{item.title}}</a> 
+                        </div>
+                        <p class="mt-2"> {{item.content}}</p>
+                        <a class="h6">- created at :<small class="ml-0 ml-md-2">{{item.created_at}}</small></a><br>
+                        
+
+                       
+                        <a style="margin: 20px;"><input type="text" class="form-control" placeholder="Ajouter un commentaire" id={{item.id}} name="body" [(ngModel)]="body" (keyup.enter)="addcomment(i,item.id)" ></a>
+                       
+                        
+                        <div *ngFor="let comment of item.comments"  > 
+                            <p>{{comment.body}}</p>
+                            
+
+                        </div>
+                     
+
+
+
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-12 col-lg-6 pt-lg-6" >
+               <div class="customer-testimonial d-flex " *ngIf="i % 2 != 0"><img src="../../../assets/front/assets/img/team/profile-picture-4.jpg" class="image image-sm mr-3 rounded-circle shadow" alt="">
+                    <div class="content bg-soft shadow-soft border border-light rounded position-relative p-4">
+                        <div class="d-flex mb-4">
+                            <a style="font-size: 30px ;font-weight: bold ;color:black">{{item.title}}</a> 
+
+                        </div>
+                        <p class="mt-2"> {{item.content}}</p>
+                        <a class="h6">- created at :<small class="ml-0 ml-md-2">{{item.created_at}}</small></a><br>
+
+                       
+                            <a style="margin: 20px;"><input type="text" class="form-control" placeholder="Ajouter un commentaire" id={{item.id}} name="body" [(ngModel)]="body" (keyup.enter)="addcomment(i,item.id)" ></a>
+                            
+                         <div *ngFor="let comment of item.comments"> 
+
+                            <p>{{comment.body}}</p>
+                            
+
+                        </div>
+
+
+                    </div>
+                </div> 
+               
+            </div>
+        </div>
+      <!--  <div class="row">
+            <div class="col text-center"><a href="testimonials.html" class="btn btn-primary animate-up-2"><span class="mr-2"><i class="fas fa-book-open"></i></span> See all stories</a></div>
+        </div>-->
+    </div>
+</section>

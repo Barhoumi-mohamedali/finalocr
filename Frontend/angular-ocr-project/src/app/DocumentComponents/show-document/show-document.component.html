@@ -1,0 +1,59 @@
+<div class="header bg-primary pb-6">
+    <div class="container-fluid">
+        <div class="header-body">
+            <div class="row align-items-center py-4">
+                <div class="col-lg-6 col-7">
+                   <!-- <h6 class="h2 text-white d-inline-block mb-0">Show My Document</h6>-->
+                    <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                            <li class="breadcrumb-item"><a style="cursor: pointer;"  routerLinkActive="active" [routerLink]="['/dashboard/archive']" >Archives</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Show Document</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-lg-6 col-5 text-right"><!--<a href="#" class="btn btn-sm btn-neutral">New</a> <a href="#" class="btn btn-sm btn-neutral">Filters</a>--></div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid mt--6">
+    <div class="card mb-4"><div class="card-header"><h3 class="mb-0">My Archive</h3></div>
+    <div class="card-body">
+        
+        <div class="row card-wrapper" >
+
+        <div class="col-lg-6">
+            <div class="card card-pricing bg-gradient-success border-0 text-center mb-4" style="background: linear-gradient(87deg,#8e169e 0,#0ea2c7 100%) !important;">
+                <div class="card-header bg-transparent">
+                    <h4 class="text-uppercase ls-1 text-white py-3 mb-0">{{doc.modelType}}</h4>
+                </div>
+                <div class="card-body px-lg-7">
+                    <div class="display-2 text-white">{{doc.title}}</div><span class="text-white">{{doc.description}}</span>
+                    <ul class="list-unstyled my-4">
+                        
+                    </ul>
+                    <button type="button" class="btn btn-success mb-3" (click)="OnShow()">Show Data</button>
+                    <a style="cursor: pointer;" routerLinkActive="active"
+                    [routerLink]="['../../editDoc',doc.id]"><button type="button" class="btn btn-primary mb-3">Edit the Document</button></a>
+                </div>
+                <div class="card-footer bg-transparent"><a href="#!" class="text-white">Delete the Document</a></div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="mb-0">The Document</h3>
+                    </div>
+                    <div class="card-body" width="500" height="600"
+                        style="border: 3px dashed #1E90FF ; background-image:url('../../../assets/img/imgback.png');">
+                        <div [innerHtml]='msg' *ngIf="msg" style="color: red;"></div>
+                        <div><img [src]="doc.file"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></div>
+</div>

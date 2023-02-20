@@ -1,0 +1,24 @@
+<h1>Django REST API with Angular 10 Image Upload Example</h1>
+<div>
+  <div *ngIf="response && imageURL">
+    <img [src]='imageURL' />
+  </div>
+
+  <form [formGroup]="docForm" (ngSubmit)="onSubmit()">
+
+    <input type="text" id="title" name="title" formControlName="title" placeholder="title" />
+    <div
+      *ngIf="!docForm.get('title')?.valid && (docForm.get('title')?.dirty ||docForm.get('title')?.touched)">
+            <div [hidden]="!docForm.get('title').errors?.['required']">
+              First Name is required
+            </div>
+          <div [hidden]="!docForm.get('title').errors?.['minlength']">
+            Min Length is 3
+        </div>
+    </div>
+    <input type="file" name="docImage" (change)="onChange($event)" />
+
+    <button type="submit">Upload Image File</button>
+
+  </form>
+</div>

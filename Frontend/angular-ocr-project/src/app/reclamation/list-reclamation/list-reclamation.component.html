@@ -1,0 +1,133 @@
+
+<div class="header bg-primary pb-6">
+    <div class="container-fluid">
+        <div class="header-body">
+            <div class="row align-items-center py-4">
+                <div class="col-lg-6 col-7">
+                    <!--<h6 class="h2 text-white d-inline-block mb-0">Reclamations </h6>-->
+                    <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                            <li class="breadcrumb-item"><a style="cursor: pointer;"  routerLinkActive="active" [routerLink]="['/dashboard/reclamation']" >Reclamations</a></li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-lg-6 col-5 text-right"><a href="#" class="btn btn-sm btn-neutral" data-toggle="modal" data-target="#myModal2"  >New</a> <!--<a href="#" class="btn btn-sm btn-neutral">Filters</a>--></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid mt--6">
+    <div class="card mb-4"><div class="card-header"><h3 class="mb-0">My Reclamation</h3></div>
+    <div class="card-body">
+        
+<div class="row card-wrapper" >
+    
+    <div class="card" >
+        <div class="card-body" >
+            
+            <div class="table-responsive">
+                <table class="table table-bordered table-secondary border-secondary">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      
+                      <th scope="col" width="700px"> Réclamations</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let rec of recs;let index=index;">
+                      <th scope="row">{{ rec.id }}</th>
+                      
+                      <td>{{ rec.title }}</td>
+                      <td>
+                        <button   data-toggle="modal" data-target="#myModal" (click)="Launch(rec,index)" class="btn btn-sm btn-info float-left " style="width: 70px;">Edit</button>
+                     
+                        &nbsp;&nbsp;<button (click)="OnDelete(rec.id)" class="btn btn-sm btn-danger float-right " style="width: 70px;">Delete</button></td>
+                   
+                    </tr>
+                   
+                  </tbody>
+              
+                </table>
+               <!-- Modal -->
+
+              </div>
+              
+        </div> 
+
+        
+    </div>
+
+    
+
+
+</div>
+</div>
+</div>
+
+</div>
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title float-left" id="myModalLabel"> Edit Reclamation</h4>
+
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group row">
+                    <label for="title" class="col-sm-2 col-form-label">title</label>
+                    <div class="col-sm-10">
+                      <input type="text" style="max-width: 300px;" [value]="reclamationLaunch.title" [(ngModel)]="reclamationLaunch.title">                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="description" class="col-sm-2 col-form-label">description</label>
+                    <div class="col-sm-10">
+                      <textarea  [value]="reclamationLaunch.description" [(ngModel)]="reclamationLaunch.description"></textarea>
+                    </div>
+                  </div>
+                
+        
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary" (click)="OnEdit()" data-dismiss="modal">Save changes</button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->
+
+
+          <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title float-left" id="myModalLabel"> New Reclamation</h4>
+
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="float:right">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group row">
+                    <label for="title" class="col-sm-2 col-form-label">title</label>
+                    <div class="col-sm-10">
+                      <input type="text" [(ngModel)]="reclamation.title">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="description" class="col-sm-2 col-form-label">description</label>
+                    <div class="col-sm-10">
+                      <input type="text" [(ngModel)]="reclamation.description">
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default " data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary " (click)="RecCreate()" data-dismiss="modal">Create</button>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div><!-- /.modal -->

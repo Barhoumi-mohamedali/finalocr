@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from demos.creative-tim.com/impact-design-system-pro/docs/front/forms/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 May 2022 14:53:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Use Impact Front&rsquo;s form elements such as text inputs, textareas, file uploads and many more to get input from you users">
+<meta name="author" content="Themesberg, Creative Tim">
+<meta name="generator" content="Hugo 0.67.0">
+<title>Forms · Impact Design System</title>
+
+<link rel="stylesheet" href="../../assets/vendor/%40fortawesome/fontawesome-free/css/all.min.css">
+<link rel="stylesheet" href="../../assets/css/docs.css">
+<link rel="icon" href="../../assets/img/favicons/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.creative-tim.com/product/impact-design-system-pro" />
+<meta name="keywords" content="impact design system pro, design system, login, form, table, tables, calendar, card, cards, navbar, modal, icons, icons, map, chat, carousel, menu, datepicker, gallery, slider, date, sidebar, social, dropdown, search, tab, nav, footer, date picker, forms, tabs, time, button, select, input, timeline, cart, car, fullcalendar, about us, invoice, account, chat, log in, blog, profile, portfolio, landing page, ecommerce, shop, landing, register, app, contact, one page, sign up, signup, store, bootstrap 4, bootstrap4, dashboard, bootstrap 4 dashboard, bootstrap 4 design, bootstrap 4 system, bootstrap 4, bootstrap 4 uit kit, bootstrap 4 kit, impact, impact ui kit, creative tim, html kit, html css template, web template, bootstrap, bootstrap 4, css3 template, frontend, responsive bootstrap template, bootstrap ui kit, responsive ui kit, impact dashboard`">
+<meta name="description" content="Kick-Start Your Development With An Awesome Design System carefully designed for your online business showcase. It comes as a complete solution, with front pages and dashboard pages included.">
+<meta itemprop="name" content="Impact Design System PRO Documentation by Creative Tim">
+<meta itemprop="description" content="Kick-Start Your Development With An Awesome Design System carefully designed for your online business showcase. It comes as a complete solution, with front pages and dashboard pages included.">
+<meta itemprop="image" content="../../../../../s3.amazonaws.com/creativetim_bucket/products/262/original/opt_impactp_thumbnail.jpg">
+<meta name="twitter:card" content="product">
+<meta name="twitter:site" content="@creativetim">
+<meta name="twitter:title" content="Impact Design System PRO Documentation by Creative Tim">
+<meta name="twitter:description" content="Kick-Start Your Development With An Awesome Design System carefully designed for your online business showcase. It comes as a complete solution, with front pages and dashboard pages included.">
+<meta name="twitter:creator" content="@creativetim">
+<meta name="twitter:image" content="../../../../../s3.amazonaws.com/creativetim_bucket/products/262/original/opt_impactp_thumbnail.jpg">
+<meta property="fb:app_id" content="655968634437471">
+<meta property="og:title" content="Impact Design System PRO Documentation by Creative Tim" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="../../../index.html" />
+<meta property="og:image" content="../../../../../s3.amazonaws.com/creativetim_bucket/products/262/original/opt_impactp_thumbnail.jpg" />
+<meta property="og:description" content="Kick-Start Your Development With An Awesome Design System carefully designed for your online business showcase. It comes as a complete solution, with front pages and dashboard pages included." />
+<meta property="og:site_name" content="Creative Tim" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-K9BGS8K':true});</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','../../../../../www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-46172202-22', 'auto', {allowLinker: true});
+ga('set', 'anonymizeIp', true);
+ga('require', 'GTM-K9BGS8K');
+ga('require', 'displayfeatures');
+ga('require', 'linker');
+ga('linker:autoLink', ["2checkout.com","avangate.com"]);
+</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../../../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NKDMSK6');</script>
+</head>
+<body>
+<header class="navbar navbar-nav navbar-expand navbar-dark navbar-theme-primary">
+<div class="container px-3 px-md-4">
+<div class="d-flex align-items-center">
+<a class="navbar-brand mr-4" href="../../getting-started/overview/index.html" aria-label="Impact Documentation">
+<img src="../../assets/brand/light.svg" height="30" alt="Impact logo">
+<span class="ml-2">Docs</span>
+</a>
+<div class="navbar-nav-scroll order-md-0 justify-content-start d-none d-md-flex">
+<ul class="navbar-nav bd-navbar-nav flex-row">
+<li class="nav-item dropdown">
+<a class="nav-link" href="#">Live preview <i class="fas fa-angle-down nav-link-arrow ml-2"></i></a>
+<ul class="dropdown-menu">
+<li>
+<a href="https://demos.creative-tim.com/impact-design-system/" target="_blank" class="dropdown-item">Impact Design System</a>
+</li>
+<li>
+<a href="../../../index-2.html" target="_blank" class="dropdown-item">Impact Design System PRO</a>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link" href="#">Support <i class="fas fa-angle-down nav-link-arrow ml-2"></i></a>
+<ul class="dropdown-menu">
+<li>
+<a href="https://github.com/creativetimofficial/impact-design-system/issues" target="_blank" class="dropdown-item">Impact Design System</a>
+</li>
+<li>
+<a href="https://github.com/creativetimofficial/ct-impact-design-system-pro/issues" target="_blank" class="dropdown-item">Impact Design System PRO</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<button class="btn btn-link bd-search-docs-toggle d-lg-none p-0 ml-3 order-3 ml-auto" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img"><title>Menu</title><path stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22" /></svg>
+</button>
+<div class="d-flex align-items-center">
+<div class="d-none d-lg-block">
+<a class="btn btn-md btn-secondary animate-up-2 ml-3 d-none d-sm-inline-block" href="https://www.creative-tim.com/product/impact-design-system-pro" target="_blank"><i class="fas fa-download mr-2"></i>Buy now</a>
+<a class="btn btn-md btn-outline-white animate-up-2 ml-3 d-none d-sm-inline-block" href="https://demos.creative-tim.com/impact-design-system/" target="_blank">Try free demo</a>
+</div>
+</div>
+</div>
+</header>
+<nav class="bd-subnavbar pt-3 pb-3 pb-md-3 d-lg-none">
+<div class="container">
+<div class="d-flex w-100 align-items-center justify-content-between">
+<ul class="flex-row list-style-none mr-3 d-flex d-lg-none">
+<li class="mr-3">
+<a href="https://www.facebook.com/themesberg/" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Themesberg on Facebook" data-original-title="Like us on Facebook">
+<i class="fab fa-facebook text-primary"></i>
+</a>
+</li>
+<li class="mr-3">
+<a href="https://twitter.com/themesberg" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Themesberg on Twitter" data-original-title="Follow us on Twitter ❤️">
+<i class="fab fa-twitter text-primary"></i>
+</a>
+</li>
+<li>
+<a href="https://github.com/themesberg" target="_blank" data-toggle="tooltip" data-placement="bottom" title="Themesberg on Github" data-original-title="Star us on Github">
+<i class="fab fa-github text-primary"></i>
+</a>
+</li>
+</ul>
+<div>
+<a class="btn btn-sm btn-tertiary animate-up-2 ml-2 ml-lg-3" href="https://www.creative-tim.com/product/impact-design-system-pro" target="_blank"><i class="fas fa-download mr-2"></i>Buy now</a>
+<a class="btn btn-sm btn-secondary animate-up-2 ml-2 ml-lg-3" href="https://demos.creative-tim.com/impact-design-system/" target="_blank">Try free demo</a>
+</div>
+</div>
+</div>
+</nav>
+<div class="container my-4">
+<div class="row flex-xl-nowrap">
+<div class="col-lg-2 bd-sidebar">
+<nav class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation"><ul class="list-unstyled">
+<li class="bd-sidenav-group my-1 js-sidenav-group has-children">
+<a class="d-inline-flex align-items-center bd-sidenav-group-link" href="../../getting-started/overview/index.html">
+Getting started
+</a>
+<ul class="nav bd-sidenav flex-column mb-2">
+<li>
+<a href="../../getting-started/overview/index.html" class="d-flex justify-content-between">Overview
+</a>
+</li>
+<li>
+<a href="../../getting-started/download/index.html" class="d-flex justify-content-between">Download
+</a>
+</li>
+<li>
+<a href="../../getting-started/quick-start/index.html" class="d-flex justify-content-between">Quick start
+</a>
+</li>
+<li>
+<a href="../../getting-started/license/index.html" class="d-flex justify-content-between">License
+</a>
+</li>
+<li>
+<a href="../../getting-started/file-structure/index.html" class="d-flex justify-content-between">File structure
+</a>
+</li>
+<li>
+<a href="../../getting-started/build-tools/index.html" class="d-flex justify-content-between">Build tools
+</a>
+</li>
+<li>
+<a href="../../getting-started/changelog/index.html" class="d-flex justify-content-between">Changelog
+</a>
+</li>
+</ul>
+</li>
+<li class="bd-sidenav-group my-1 active js-sidenav-group has-children">
+<a class="d-inline-flex align-items-center bd-sidenav-group-link" href="../accordions/index.html" aria-current="true">
+Front
+</a>
+<ul class="nav bd-sidenav flex-column mb-2">
+<li>
+<a href="../accordions/index.html" class="d-flex justify-content-between">Accordions
+</a>
+</li>
+<li>
+ <a href="../alerts/index.html" class="d-flex justify-content-between">Alerts
+</a>
+</li>
+<li>
+<a href="../badges/index.html" class="d-flex justify-content-between">Badges
+</a>
+</li>
+<li>
+<a href="../blog-cards/index.html" class="d-flex justify-content-between">Blog cards<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../breadcrumbs/index.html" class="d-flex justify-content-between">Breadcrumbs
+</a>
+</li>
+<li>
+<a href="../buttons/index.html" class="d-flex justify-content-between">Buttons
+</a>
+</li>
+<li class="active bd-sidenav-active">
+<a href="index.html" aria-current="page" class="d-flex justify-content-between">Forms
+</a>
+</li>
+<li>
+<a href="../modals/index.html" class="d-flex justify-content-between">Modals
+</a>
+</li>
+<li>
+<a href="../navbars/index.html" class="d-flex justify-content-between">Navbars
+</a>
+</li>
+<li>
+<a href="../pagination/index.html" class="d-flex justify-content-between">Pagination
+</a>
+</li>
+<li>
+<a href="../popovers/index.html" class="d-flex justify-content-between">Popovers
+</a>
+</li>
+<li>
+<a href="../pricing-cards/index.html" class="d-flex justify-content-between">Pricing cards
+</a>
+</li>
+<li>
+<a href="../profile-cards/index.html" class="d-flex justify-content-between">Profile cards<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../tabs/index.html" class="d-flex justify-content-between">Tabs<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../timelines/index.html" class="d-flex justify-content-between">Timelines<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../tooltips/index.html" class="d-flex justify-content-between">Tooltips
+</a>
+</li>
+<li>
+<a href="../icons/index.html" class="d-flex justify-content-between">Icons
+</a>
+</li>
+<li>
+<a href="../typography/index.html" class="d-flex justify-content-between">Typography
+</a>
+</li>
+</ul>
+</li>
+<li class="bd-sidenav-group my-1 js-sidenav-group has-children">
+<a class="d-inline-flex align-items-center bd-sidenav-group-link" href="../../dashboard/alerts/index.html">
+Dashboard
+</a>
+<ul class="nav bd-sidenav flex-column mb-2">
+<li>
+<a href="../../dashboard/alerts/index.html" class="d-flex justify-content-between">Alerts
+ </a>
+</li>
+<li>
+<a href="../../dashboard/avatar/index.html" class="d-flex justify-content-between">Avatar
+</a>
+</li>
+<li>
+<a href="../../dashboard/badge/index.html" class="d-flex justify-content-between">Badge
+</a>
+</li>
+<li>
+<a href="../../dashboard/breadcrumb/index.html" class="d-flex justify-content-between">Breadcrumb
+</a>
+</li>
+<li>
+<a href="../../dashboard/buttons/index.html" class="d-flex justify-content-between">Buttons
+</a>
+</li>
+<li>
+<a href="../../dashboard/social-buttons/index.html" class="d-flex justify-content-between">Social buttons<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../dashboard/card/index.html" class="d-flex justify-content-between">Card
+</a>
+</li>
+<li>
+<a href="../../dashboard/carousel/index.html" class="d-flex justify-content-between">Carousel<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../dashboard/collapse/index.html" class="d-flex justify-content-between">Collapse<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../dashboard/dropdowns/index.html" class="d-flex justify-content-between">Dropdowns
+</a>
+</li>
+<li>
+<a href="../../dashboard/forms/index.html" class="d-flex justify-content-between">Forms
+</a>
+</li>
+<li>
+<a href="../../dashboard/input-group/index.html" class="d-flex justify-content-between">Input group
+</a>
+</li>
+<li>
+<a href="../../dashboard/list-group/index.html" class="d-flex justify-content-between">List group<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../dashboard/modal/index.html" class="d-flex justify-content-between">Modal
+</a>
+</li>
+<li>
+<a href="../../dashboard/navs/index.html" class="d-flex justify-content-between">Navs
+</a>
+</li>
+<li>
+<a href="../../dashboard/navbar/index.html" class="d-flex justify-content-between">Navbar
+</a>
+</li>
+<li>
+<a href="../../dashboard/pagination/index.html" class="d-flex justify-content-between">Pagination
+</a>
+</li>
+<li>
+<a href="../../dashboard/popovers/index.html" class="d-flex justify-content-between">Popovers
+</a>
+</li>
+<li>
+<a href="../../dashboard/progress/index.html" class="d-flex justify-content-between">Progress
+</a>
+</li>
+<li>
+<a href="../../dashboard/tooltips/index.html" class="d-flex justify-content-between">Tooltips
+</a>
+</li>
+<li>
+<a href="../../dashboard/grid/index.html" class="d-flex justify-content-between">Grid
+</a>
+</li>
+<li>
+<a href="../../dashboard/tables/index.html" class="d-flex justify-content-between">Tables
+</a>
+</li>
+<li>
+<a href="../../dashboard/icons/index.html" class="d-flex justify-content-between">Icons
+</a>
+</li>
+<li>
+<a href="../../dashboard/typography/index.html" class="d-flex justify-content-between">Typography
+</a>
+</li>
+</ul>
+</li>
+<li class="bd-sidenav-group my-1 js-sidenav-group has-children">
+<a class="d-inline-flex align-items-center bd-sidenav-group-link" href="../../plugins/charts/index.html">
+Plugins
+</a>
+<ul class="nav bd-sidenav flex-column mb-2">
+<li>
+<a href="../../plugins/charts/index.html" class="d-flex justify-content-between">Charts
+</a>
+</li>
+<li>
+<a href="../../plugins/datatables/index.html" class="d-flex justify-content-between">Datatables<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../plugins/datepicker/index.html" class="d-flex justify-content-between">Datepicker
+</a>
+</li>
+<li>
+<a href="../../plugins/datetimepicker/index.html" class="d-flex justify-content-between">Datetimepicker<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../plugins/dropzone/index.html" class="d-flex justify-content-between">Dropzone<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../plugins/full-calendar/index.html" class="d-flex justify-content-between">Full Calendar<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../plugins/jvectormap/index.html" class="d-flex justify-content-between">jVectorMap<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../plugins/list-js/index.html" class="d-flex justify-content-between">List JS<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../plugins/maps/index.html" class="d-flex justify-content-between">Maps
+</a>
+</li>
+<li>
+<a href="../../plugins/quill/index.html" class="d-flex justify-content-between">Quill<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../plugins/notify/index.html" class="d-flex justify-content-between">Notify<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../plugins/select/index.html" class="d-flex justify-content-between">Select<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../plugins/sliders/index.html" class="d-flex justify-content-between">Sliders
+</a>
+</li>
+<li>
+<a href="../../plugins/sweet-alerts/index.html" class="d-flex justify-content-between">Sweet alerts<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../plugins/tags/index.html" class="d-flex justify-content-between">Tags<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+<main class="col-lg-7 py-md-3 px-lg-5 bd-content" role="main">
+<h1 class="bd-title" id="content">Forms </h1>
+<p class="bd-lead">Use Impact Front&rsquo;s form elements such as text inputs, textareas, file uploads and many more to get input from you users</p>
+<h2 id="form-example">Form example</h2>
+<p>The following example is a classical form for login or register pages:</p>
+<div class="bd-example">
+<form>
+<div class="form-group">
+<label for="exampleInputEmail1">Email address</label>
+<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+</div>
+<div class="form-group">
+<label for="exampleInputPassword1">Password</label>
+<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+</div>
+<div class="form-group form-check mt-3">
+<input type="checkbox" class="form-check-input" id="exampleCheck1">
+<label class="form-check-label form-check-sign-white" for="exampleCheck1">Check me out</label>
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;exampleInputEmail1&#34;</span><span class="p">&gt;</span>Email address<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;email&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;exampleInputEmail1&#34;</span> <span class="na">aria-describedby</span><span class="o">=</span><span class="s">&#34;emailHelp&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Enter email&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">small</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;emailHelp&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-text text-muted&#34;</span><span class="p">&gt;</span>We&#39;ll never share your email with anyone else.<span class="p">&lt;/</span><span class="nt">small</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;exampleInputPassword1&#34;</span><span class="p">&gt;</span>Password<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;password&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;exampleInputPassword1&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;Password&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group form-check mt-3&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;exampleCheck1&#34;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label form-check-sign-white&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;exampleCheck1&#34;</span><span class="p">&gt;</span>Check me out<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;submit&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn btn-primary&#34;</span><span class="p">&gt;</span>Submit<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="select-input">Select input</h2>
+<p>The following example is how the select inputs look and can be used:</p>
+<div class="bd-example">
+<div class="form-group">
+<label for="exampleFormControlSelect1">Example select</label>
+<select class="custom-select" id="exampleFormControlSelect1">
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;exampleFormControlSelect1&#34;</span><span class="p">&gt;</span>Example select<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">select</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;custom-select&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;exampleFormControlSelect1&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>1<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>2<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>3<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>4<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>5<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="multiple-select">Multiple select</h2>
+<p>The following example is how the select inputs look and can be used:</p>
+<div class="bd-example">
+<div class="form-group">
+<label for="exampleFormControlSelect2">Example multiple select</label>
+<select multiple class="custom-select" id="exampleFormControlSelect2">
+<option>Bootstrap</option>
+<option>VueJs</option>
+<option>Angular</option>
+<option>React</option>
+<option>NodeJs</option>
+</select>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;exampleFormControlSelect2&#34;</span><span class="p">&gt;</span>Example multiple select<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">select</span> <span class="na">multiple</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;custom-select&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;exampleFormControlSelect2&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>Bootstrap<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>VueJs<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>Angular<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>React<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>NodeJs<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="textarea">Textarea</h2>
+<p>The following example is how textareas can be used:</p>
+<div class="bd-example">
+<div class="form-group">
+<label for="exampleFormControlTextarea2">Example textarea</label>
+<textarea class="form-control" id="exampleFormControlTextarea2" rows="3"></textarea>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;exampleFormControlTextarea2&#34;</span><span class="p">&gt;</span>Example textarea<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">textarea</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-control&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;exampleFormControlTextarea2&#34;</span> <span class="na">rows</span><span class="o">=</span><span class="s">&#34;3&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">textarea</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="file-upload">File upload</h2>
+<p>The following example is how file uploads can be used:</p>
+<div class="bd-example">
+<div class="custom-file">
+<input type="file" class="custom-file-input" id="customFile">
+<label class="custom-file-label" for="customFile">Choose file</label>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;custom-file&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;file&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;custom-file-input&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;customFile&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;custom-file-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;customFile&#34;</span><span class="p">&gt;</span>Choose file<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="checkboxes">Checkboxes</h2>
+<h3 id="square-style">Square style</h3>
+<div class="bd-example">
+<div class="form-group form-check mt-3">
+<input type="checkbox" class="form-check-input" id="exampleCheck2">
+<label class="form-check-label form-check-sign-white" for="exampleCheck2">Check me out</label>
+</div>
+<div class="form-group form-check mt-3">
+<input type="checkbox" class="form-check-input" id="exampleCheck3" checked>
+<label class="form-check-label form-check-sign-white" for="exampleCheck3">Check me out</label>
+</div>
+<div class="form-group form-check mt-3">
+<input type="checkbox" class="form-check-input" id="exampleCheck4" disabled>
+<label class="form-check-label form-check-sign-white" for="exampleCheck4">Disabled checkbox</label>
+</div>
+<div class="form-group form-check mt-3">
+<input type="checkbox" class="form-check-input" id="exampleCheck5" disabled checked>
+<label class="form-check-label form-check-sign-white" for="exampleCheck5">Disabled checked</label>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group form-check mt-3&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;exampleCheck2&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label form-check-sign-white&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;exampleCheck2&#34;</span><span class="p">&gt;</span>Check me out<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group form-check mt-3&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;exampleCheck3&#34;</span> <span class="na">checked</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label form-check-sign-white&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;exampleCheck3&#34;</span><span class="p">&gt;</span>Check me out<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group form-check mt-3&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;exampleCheck4&#34;</span> <span class="na">disabled</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label form-check-sign-white&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;exampleCheck4&#34;</span><span class="p">&gt;</span>Disabled checkbox<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-group form-check mt-3&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;checkbox&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;exampleCheck5&#34;</span> <span class="na">disabled</span> <span class="na">checked</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label form-check-sign-white&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;exampleCheck5&#34;</span><span class="p">&gt;</span>Disabled checked<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+<h2 id="radio-buttons">Radio buttons</h2>
+<div class="bd-example">
+<div class="form-check">
+<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+<label class="form-check-label" for="exampleRadios1">Radio example</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+<label class="form-check-label" for="exampleRadios2">Radio example 2</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" checked>
+<label class="form-check-label" for="exampleRadios3">Radio example checked</label>
+</div>
+<div class="form-check">
+<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option4" disabled>
+ <label class="form-check-label" for="exampleRadios4">Radio example disabled</label>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;exampleRadios&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;exampleRadios1&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;option1&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;exampleRadios1&#34;</span><span class="p">&gt;</span>Radio example<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;exampleRadios&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;exampleRadios2&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;option2&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;exampleRadios2&#34;</span><span class="p">&gt;</span>Radio example 2<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;exampleRadios&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;exampleRadios3&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;option3&#34;</span> <span class="na">checked</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;exampleRadios3&#34;</span><span class="p">&gt;</span>Radio example checked<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-input&#34;</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;radio&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;exampleRadios&#34;</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;exampleRadios4&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;option4&#34;</span> <span class="na">disabled</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;form-check-label&#34;</span> <span class="na">for</span><span class="o">=</span><span class="s">&#34;exampleRadios4&#34;</span><span class="p">&gt;</span>Radio example disabled<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</main>
+<div class="col-lg-3 bd-sidebar">
+<nav class="bd-toc bd-links mb-5 text-muted list-style-none" aria-label="Secondary navigation">
+<nav id="TableOfContents">
+<ul>
+<li><a href="#form-example">Form example</a></li>
+<li><a href="#select-input">Select input</a></li>
+<li><a href="#multiple-select">Multiple select</a></li>
+<li><a href="#textarea">Textarea</a></li>
+<li><a href="#file-upload">File upload</a></li>
+<li><a href="#checkboxes">Checkboxes</a>
+<ul>
+<li><a href="#square-style">Square style</a></li>
+</ul>
+</li>
+<li><a href="#radio-buttons">Radio buttons</a></li>
+</ul>
+</nav>
+</nav>
+</div>
+</div>
+</div>
+<footer class="bd-footer p-3 pt-5 p-md-5 mt-5 bg-soft text-center">
+<div class="container">
+<p class="font-small mb-4">Joint production by:</p>
+<div class="d-flex justify-content-center">
+<a href="https://themesberg.com/?ref=creative-tim" class="mr-4" target="_blank">
+<img src="../../assets/brand/themesberg.svg" class="mb-3" height="40" alt="Themesberg Logo">
+<span class="d-block">Themesberg</span>
+</a>
+<a href="https://creative-tim.com/" target="_blank">
+<img src="../../assets/brand/creative-tim-circle.png" class="mb-3" height="41" alt="Creative Tim Logo">
+<span class="d-block">Creative Tim</span>
+</a>
+</div>
+<hr>
+<ul class="bd-footer-links mb-2">
+<li class="mr-3"><a href="https://www.creative-tim.com/templates" target="_blank">Products</a></li>
+<li class="mr-3"><a href="https://www.creative-tim.com/blog" target="_blank">Blog</a></li>
+<li class="mr-3"><a href="https://www.creative-tim.com/presentation" target="_blank">About</a></li>
+<li><a href="https://www.creative-tim.com/contact-us" target="_blank">Contact</a></li>
+</ul>
+</div>
+</footer>
+<script src="../../../../../cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../../../../cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="../../../../../cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+<script src="../../assets/vendor/headroom.js/dist/headroom.min.js"></script>
+<script src="../../assets/vendor/onscreen/dist/on-screen.umd.min.js"></script>
+<script src="../../assets/vendor/nouislider/distribute/nouislider.min.js"></script>
+<script src="../../assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script src="../../assets/vendor/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+<script src="../../assets/vendor/waypoints/lib/jquery.waypoints.min.js"></script>
+<script src="../../assets/vendor/owl.carousel/dist/owl.carousel.min.js"></script>
+<script src="../../assets/vendor/jarallax/dist/jarallax.min.js"></script>
+<script src="../../assets/vendor/jquery.counterup/jquery.counterup.min.js"></script>
+<script src="../../assets/vendor/jquery-countdown/dist/jquery.countdown.min.js"></script>
+<script src="../../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="../../assets/vendor/chart.js/dist/Chart.min.js"></script>
+<script src="../../dist/js/bootstrap.min.js"></script>
+<script src="../../assets/js/front.js"></script>
+<script src="../../assets/js/docs.min.js"></script>
+</body>
+
+<!-- Mirrored from demos.creative-tim.com/impact-design-system-pro/docs/front/forms/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 May 2022 14:53:24 GMT -->
+</html>

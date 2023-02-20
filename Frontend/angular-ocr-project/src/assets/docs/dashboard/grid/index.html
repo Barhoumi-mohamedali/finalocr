@@ -1,0 +1,868 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from demos.creative-tim.com/impact-design-system-pro/docs/dashboard/grid/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 May 2022 14:53:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, five default responsive tiers, Sass variables and mixins, and dozens of predefined classes.">
+<meta name="author" content="Themesberg, Creative Tim">
+<meta name="generator" content="Hugo 0.67.0">
+<title>Grid system · Impact Design System</title>
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/vendor/%40fortawesome/fontawesome-free/css/all.min.css">
+<link rel="stylesheet" href="../../assets-db/vendor/nucleo/css/nucleo.css" type="text/css">
+<link rel="stylesheet" href="../../assets-db/vendor/sweetalert2/dist/sweetalert2.min.css">
+<link rel="stylesheet" href="../../assets-db/vendor/fullcalendar/dist/fullcalendar.min.css">
+<link rel="stylesheet" href="../../assets-db/vendor/quill/dist/quill.core.css" type="text/css">
+<link rel="stylesheet" href="../../assets-db/vendor/select2/dist/css/select2.min.css">
+<link rel="stylesheet" href="../../assets-db/vendor/animate.css/animate.min.css">
+<link rel="stylesheet" href="../../assets/css/docs-db.css">
+<link rel="icon" href="../../assets/img/favicons/favicon.png" type="image/png">
+<link rel="canonical" href="https://www.creative-tim.com/product/impact-design-system-pro" />
+<meta name="keywords" content="impact design system pro, design system, login, form, table, tables, calendar, card, cards, navbar, modal, icons, icons, map, chat, carousel, menu, datepicker, gallery, slider, date, sidebar, social, dropdown, search, tab, nav, footer, date picker, forms, tabs, time, button, select, input, timeline, cart, car, fullcalendar, about us, invoice, account, chat, log in, blog, profile, portfolio, landing page, ecommerce, shop, landing, register, app, contact, one page, sign up, signup, store, bootstrap 4, bootstrap4, dashboard, bootstrap 4 dashboard, bootstrap 4 design, bootstrap 4 system, bootstrap 4, bootstrap 4 uit kit, bootstrap 4 kit, impact, impact ui kit, creative tim, html kit, html css template, web template, bootstrap, bootstrap 4, css3 template, frontend, responsive bootstrap template, bootstrap ui kit, responsive ui kit, impact dashboard`">
+<meta name="description" content="Kick-Start Your Development With An Awesome Design System carefully designed for your online business showcase. It comes as a complete solution, with front pages and dashboard pages included.">
+<meta itemprop="name" content="Impact Design System PRO Documentation by Creative Tim">
+<meta itemprop="description" content="Kick-Start Your Development With An Awesome Design System carefully designed for your online business showcase. It comes as a complete solution, with front pages and dashboard pages included.">
+<meta itemprop="image" content="../../../../../s3.amazonaws.com/creativetim_bucket/products/262/original/opt_impactp_thumbnail.jpg">
+<meta name="twitter:card" content="product">
+<meta name="twitter:site" content="@creativetim">
+<meta name="twitter:title" content="Impact Design System PRO Documentation by Creative Tim">
+<meta name="twitter:description" content="Kick-Start Your Development With An Awesome Design System carefully designed for your online business showcase. It comes as a complete solution, with front pages and dashboard pages included.">
+<meta name="twitter:creator" content="@creativetim">
+<meta name="twitter:image" content="../../../../../s3.amazonaws.com/creativetim_bucket/products/262/original/opt_impactp_thumbnail.jpg">
+<meta property="fb:app_id" content="655968634437471">
+<meta property="og:title" content="Impact Design System PRO Documentation by Creative Tim" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="../../../index.html" />
+<meta property="og:image" content="../../../../../s3.amazonaws.com/creativetim_bucket/products/262/original/opt_impactp_thumbnail.jpg" />
+<meta property="og:description" content="Kick-Start Your Development With An Awesome Design System carefully designed for your online business showcase. It comes as a complete solution, with front pages and dashboard pages included." />
+<meta property="og:site_name" content="Creative Tim" />
+<style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',4000,
+{'GTM-K9BGS8K':true});</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','../../../../../www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-46172202-22', 'auto', {allowLinker: true});
+ga('set', 'anonymizeIp', true);
+ga('require', 'GTM-K9BGS8K');
+ga('require', 'displayfeatures');
+ga('require', 'linker');
+ga('linker:autoLink', ["2checkout.com","avangate.com"]);
+</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../../../../../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NKDMSK6');</script>
+</head>
+<body>
+<nav class="navbar navbar-horizontal navbar-expand-lg navbar-dark bg-primary">
+<div class="container">
+<a class="navbar-brand mr-4" href="../../getting-started/overview/index.html" aria-label="Impact Documentation">
+<img src="../../assets/brand/light.svg" height="30" alt="Impact logo">
+<span class="ml-2">Docs DB</span>
+</a>
+<div class="d-none d-lg-flex justify-content-between align-items-center w-100">
+<ul class="navbar-nav bd-navbar-nav flex-row mr-auto">
+<li class="nav-item dropdown">
+<a class="nav-link" href="#">Live preview <i class="fas fa-angle-down nav-link-arrow ml-2"></i></a>
+<ul class="dropdown-menu">
+<li>
+<a href="https://demos.creative-tim.com/impact-design-system/" target="_blank" class="dropdown-item">Impact Design System</a>
+</li>
+<li>
+<a href="../../../index-2.html" target="_blank" class="dropdown-item">Impact Design System PRO</a>
+</li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link" href="#">Support <i class="fas fa-angle-down nav-link-arrow ml-2"></i></a>
+<ul class="dropdown-menu">
+<li>
+<a href="https://github.com/creativetimofficial/impact-design-system/issues" target="_blank" class="dropdown-item">Impact Design System</a>
+</li>
+<li>
+<a href="https://github.com/creativetimofficial/ct-impact-design-system-pro/issues" target="_blank" class="dropdown-item">Impact Design System PRO</a>
+</li>
+ </ul>
+</li>
+</ul>
+<div class="d-none d-lg-block ml-auto">
+<a href="https://www.creative-tim.com/product/impact-design-system-pro" target="_blank" class="btn btn-icon btn-3 btn-secondary">
+<span class="btn-inner--icon"><i class="ni ni-bag-17"></i></span>
+<span class="btn-inner--text">Buy now</span>
+</a>
+<a href="https://demos.creative-tim.com/impact-design-system/" target="_blank" class="btn btn-outline-white">Try Free demo</a>
+</div>
+</div>
+<button class="btn btn-link bd-search-docs-toggle d-lg-none p-0 ml-3 order-3 ml-auto" type="button" data-toggle="collapse" data-target="#bd-docs-nav" aria-controls="bd-docs-nav" aria-expanded="false" aria-label="Toggle docs navigation">
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img"><title>Menu</title><path stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22" /></svg>
+</button>
+</div>
+</nav>
+<nav class="bd-subnavbar pt-3 pb-3 pb-md-3 d-lg-none">
+<div class="container">
+<div class="d-flex w-100 align-items-center justify-content-end">
+<div>
+<a href="https://www.creative-tim.com/product/impact-design-system-pro" target="_blank" class="btn btn-icon btn-3 btn-primary">
+<span class="btn-inner--icon"><i class="ni ni-bag-17"></i></span>
+<span class="btn-inner--text">Buy now</span>
+</a>
+<a href="https://demos.creative-tim.com/impact-design-system/" target="_blank" class="btn btn-secondary">Try Free demo</a>
+</div>
+</div>
+</div>
+</nav>
+<div class="container my-4">
+<div class="row flex-xl-nowrap">
+<div class="col-lg-2 bd-sidebar">
+<nav class="collapse bd-links" id="bd-docs-nav" aria-label="Main navigation"><ul class="list-unstyled">
+<li class="bd-sidenav-group my-1 js-sidenav-group has-children">
+<a class="d-inline-flex align-items-center bd-sidenav-group-link" href="../../getting-started/overview/index.html">
+Getting started
+</a>
+<ul class="nav bd-sidenav flex-column mb-2">
+<li>
+<a href="../../getting-started/overview/index.html" class="d-flex justify-content-between">Overview
+</a>
+</li>
+<li>
+<a href="../../getting-started/download/index.html" class="d-flex justify-content-between">Download
+</a>
+</li>
+<li>
+<a href="../../getting-started/quick-start/index.html" class="d-flex justify-content-between">Quick start
+</a>
+</li>
+<li>
+<a href="../../getting-started/license/index.html" class="d-flex justify-content-between">License
+</a>
+</li>
+<li>
+<a href="../../getting-started/file-structure/index.html" class="d-flex justify-content-between">File structure
+</a>
+</li>
+<li>
+<a href="../../getting-started/build-tools/index.html" class="d-flex justify-content-between">Build tools
+</a>
+</li>
+<li>
+<a href="../../getting-started/changelog/index.html" class="d-flex justify-content-between">Changelog
+</a>
+</li>
+</ul>
+</li>
+<li class="bd-sidenav-group my-1 js-sidenav-group has-children">
+<a class="d-inline-flex align-items-center bd-sidenav-group-link" href="../../front/accordions/index.html">
+Front
+</a>
+<ul class="nav bd-sidenav flex-column mb-2">
+<li>
+<a href="../../front/accordions/index.html" class="d-flex justify-content-between">Accordions
+</a>
+</li>
+<li>
+<a href="../../front/alerts/index.html" class="d-flex justify-content-between">Alerts
+</a>
+</li>
+<li>
+<a href="../../front/badges/index.html" class="d-flex justify-content-between">Badges
+</a>
+</li>
+<li>
+<a href="../../front/blog-cards/index.html" class="d-flex justify-content-between">Blog cards<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../front/breadcrumbs/index.html" class="d-flex justify-content-between">Breadcrumbs
+</a>
+</li>
+<li>
+<a href="../../front/buttons/index.html" class="d-flex justify-content-between">Buttons
+</a>
+</li>
+<li>
+<a href="../../front/forms/index.html" class="d-flex justify-content-between">Forms
+</a>
+</li>
+<li>
+<a href="../../front/modals/index.html" class="d-flex justify-content-between">Modals
+</a>
+</li>
+<li>
+<a href="../../front/navbars/index.html" class="d-flex justify-content-between">Navbars
+</a>
+</li>
+<li>
+<a href="../../front/pagination/index.html" class="d-flex justify-content-between">Pagination
+</a>
+</li>
+<li>
+<a href="../../front/popovers/index.html" class="d-flex justify-content-between">Popovers
+</a>
+</li>
+<li>
+<a href="../../front/pricing-cards/index.html" class="d-flex justify-content-between">Pricing cards
+</a>
+</li>
+<li>
+<a href="../../front/profile-cards/index.html" class="d-flex justify-content-between">Profile cards<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../front/tabs/index.html" class="d-flex justify-content-between">Tabs<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../front/timelines/index.html" class="d-flex justify-content-between">Timelines<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../front/tooltips/index.html" class="d-flex justify-content-between">Tooltips
+</a>
+</li>
+<li>
+<a href="../../front/icons/index.html" class="d-flex justify-content-between">Icons
+</a>
+</li>
+<li>
+<a href="../../front/typography/index.html" class="d-flex justify-content-between">Typography
+</a>
+</li>
+</ul>
+</li>
+<li class="bd-sidenav-group my-1 active js-sidenav-group has-children">
+<a class="d-inline-flex align-items-center bd-sidenav-group-link" href="../alerts/index.html" aria-current="true">
+Dashboard
+</a>
+<ul class="nav bd-sidenav flex-column mb-2">
+<li>
+<a href="../alerts/index.html" class="d-flex justify-content-between">Alerts
+</a>
+</li>
+<li>
+<a href="../avatar/index.html" class="d-flex justify-content-between">Avatar
+</a>
+</li>
+<li>
+<a href="../badge/index.html" class="d-flex justify-content-between">Badge
+</a>
+</li>
+<li>
+<a href="../breadcrumb/index.html" class="d-flex justify-content-between">Breadcrumb
+</a>
+</li>
+<li>
+<a href="../buttons/index.html" class="d-flex justify-content-between">Buttons
+</a>
+</li>
+<li>
+<a href="../social-buttons/index.html" class="d-flex justify-content-between">Social buttons<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../card/index.html" class="d-flex justify-content-between">Card
+</a>
+</li>
+<li>
+<a href="../carousel/index.html" class="d-flex justify-content-between">Carousel<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../collapse/index.html" class="d-flex justify-content-between">Collapse<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../dropdowns/index.html" class="d-flex justify-content-between">Dropdowns
+</a>
+</li>
+<li>
+<a href="../forms/index.html" class="d-flex justify-content-between">Forms
+</a>
+</li>
+<li>
+<a href="../input-group/index.html" class="d-flex justify-content-between">Input group
+</a>
+</li>
+<li>
+<a href="../list-group/index.html" class="d-flex justify-content-between">List group<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../modal/index.html" class="d-flex justify-content-between">Modal
+</a>
+</li>
+<li>
+<a href="../navs/index.html" class="d-flex justify-content-between">Navs
+</a>
+</li>
+<li>
+<a href="../navbar/index.html" class="d-flex justify-content-between">Navbar
+</a>
+</li>
+<li>
+<a href="../pagination/index.html" class="d-flex justify-content-between">Pagination
+</a>
+</li>
+<li>
+<a href="../popovers/index.html" class="d-flex justify-content-between">Popovers
+</a>
+</li>
+<li>
+<a href="../progress/index.html" class="d-flex justify-content-between">Progress
+</a>
+</li>
+<li>
+<a href="../tooltips/index.html" class="d-flex justify-content-between">Tooltips
+</a>
+</li>
+<li class="active bd-sidenav-active">
+<a href="index.html" aria-current="page" class="d-flex justify-content-between">Grid
+</a>
+</li>
+<li>
+<a href="../tables/index.html" class="d-flex justify-content-between">Tables
+</a>
+</li>
+<li>
+<a href="../icons/index.html" class="d-flex justify-content-between">Icons
+</a>
+</li>
+<li>
+<a href="../typography/index.html" class="d-flex justify-content-between">Typography
+</a>
+</li>
+</ul>
+</li>
+<li class="bd-sidenav-group my-1 js-sidenav-group has-children">
+<a class="d-inline-flex align-items-center bd-sidenav-group-link" href="../../plugins/charts/index.html">
+Plugins
+</a>
+<ul class="nav bd-sidenav flex-column mb-2">
+<li>
+<a href="../../plugins/charts/index.html" class="d-flex justify-content-between">Charts
+</a>
+</li>
+<li>
+<a href="../../plugins/datatables/index.html" class="d-flex justify-content-between">Datatables<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../plugins/datepicker/index.html" class="d-flex justify-content-between">Datepicker
+</a>
+</li>
+<li>
+<a href="../../plugins/datetimepicker/index.html" class="d-flex justify-content-between">Datetimepicker<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../plugins/dropzone/index.html" class="d-flex justify-content-between">Dropzone<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../plugins/full-calendar/index.html" class="d-flex justify-content-between">Full Calendar<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../plugins/jvectormap/index.html" class="d-flex justify-content-between">jVectorMap<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../plugins/list-js/index.html" class="d-flex justify-content-between">List JS<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../plugins/maps/index.html" class="d-flex justify-content-between">Maps
+</a>
+</li>
+<li>
+<a href="../../plugins/quill/index.html" class="d-flex justify-content-between">Quill<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../plugins/notify/index.html" class="d-flex justify-content-between">Notify<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../plugins/select/index.html" class="d-flex justify-content-between">Select<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../plugins/sliders/index.html" class="d-flex justify-content-between">Sliders
+</a>
+</li>
+<li>
+<a href="../../plugins/sweet-alerts/index.html" class="d-flex justify-content-between">Sweet alerts<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+<li>
+<a href="../../plugins/tags/index.html" class="d-flex justify-content-between">Tags<span class="badge badge-primary float-right ml-2">Pro</span>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+<main class="col-lg-7 py-md-3 px-lg-5 bd-content" role="main">
+<h1 class="bd-title" id="content">Grid system </h1>
+<p class="bd-lead">Use our powerful mobile-first flexbox grid to build layouts of all shapes and sizes thanks to a twelve column system, five default responsive tiers, Sass variables and mixins, and dozens of predefined classes.</p>
+<h2 id="how-it-works">How it works</h2>
+<p>Bootstrap&rsquo;s grid system uses a series of containers, rows, and columns to layout and align content. It&rsquo;s built with <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">flexbox</a> and is fully responsive. Below is an example and an in-depth look at how the grid comes together.</p>
+<p><strong>New to or unfamiliar with flexbox?</strong> <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background">Read this CSS Tricks flexbox guide</a> for background, terminology, guidelines, and code snippets.</p>
+<div class="ct-example-row">
+<div class="bd-example">
+<div class="container">
+<div class="row">
+<div class="col-sm">
+<span>One of three columns</span>
+</div>
+<div class="col-sm">
+<span>One of three columns</span>
+</div>
+<div class="col-sm">
+<span>One of three columns</span>
+</div>
+</div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>One of three columns<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>One of three columns<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>One of three columns<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div>
+<p>The above example creates three equal-width columns on small, medium, large, and extra large devices using our predefined grid classes. Those columns are centered in the page with the parent <code>.container</code>.</p>
+<h2 id="grid-options">Grid options</h2>
+<p>While Bootstrap uses <code>em</code>s or <code>rem</code>s for defining most sizes, <code>px</code>s are used for grid breakpoints and container widths. This is because the viewport width is in pixels and does not change with the <a href="https://drafts.csswg.org/mediaqueries-3/#units">font size</a>.</p>
+<p>See how aspects of the Bootstrap grid system work across multiple devices with a handy table.</p>
+<table class="table table-bordered table-striped">
+<thead>
+<tr>
+<th></th>
+<th class="text-center">
+Extra small<br>
+<small>&lt;576px</small>
+</th>
+<th class="text-center">
+Small<br>
+<small>&ge;576px</small>
+</th>
+<th class="text-center">
+Medium<br>
+<small>&ge;768px</small>
+</th>
+<th class="text-center">
+Large<br>
+<small>&ge;992px</small>
+</th>
+<th class="text-center">
+Extra large<br>
+<small>&ge;1200px</small>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="text-nowrap" scope="row">Max container width</th>
+<td>None (auto)</td>
+<td>540px</td>
+<td>720px</td>
+<td>960px</td>
+<td>1140px</td>
+</tr>
+<tr>
+<th class="text-nowrap" scope="row">Class prefix</th>
+<td><code>.col-</code></td>
+<td><code>.col-sm-</code></td>
+<td><code>.col-md-</code></td>
+<td><code>.col-lg-</code></td>
+<td><code>.col-xl-</code></td>
+</tr>
+<tr>
+<th class="text-nowrap" scope="row"># of columns</th>
+<td colspan="5">12</td>
+</tr>
+<tr>
+<th class="text-nowrap" scope="row">Gutter width</th>
+<td colspan="5">30px (15px on each side of a column)</td>
+</tr>
+<tr>
+<th class="text-nowrap" scope="row">Nestable</th>
+<td colspan="5">Yes</td>
+</tr>
+<tr>
+<th class="text-nowrap" scope="row">Column ordering</th>
+<td colspan="5">Yes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="auto-layout-columns">Auto-layout columns</h2>
+<p>Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered class like <code>.col-sm-6</code>.</p>
+<h3 id="equal-width">Equal-width</h3>
+<p>For example, here are two grid layouts that apply to every device and viewport, from <code>xs</code> to <code>xl</code>. Add any number of unit-less classes for each breakpoint you need and every column will be the same width.</p>
+<div class="ct-example-row">
+<div class="bd-example">
+<div class="container">
+<div class="row">
+<div class="col">
+<span>1 of 2</span>
+</div>
+<div class="col">
+<span>2 of 2</span>
+</div>
+</div>
+<div class="row">
+<div class="col">
+<span>1 of 3</span>
+</div>
+<div class="col">
+<span>2 of 3</span>
+</div>
+<div class="col">
+<span>3 of 3</span>
+</div>
+</div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>1 of 2<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>2 of 2<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>1 of 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>2 of 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>3 of 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div>
+<p>Equal-width columns can be broken into multiple lines, but there was a <a href="https://github.com/philipwalton/flexbugs#flexbug-11">Safari flexbox bug</a> that prevented this from working without an explicit <code>flex-basis</code> or <code>border</code>. There are workarounds for older browser versions, but they shouldn&rsquo;t be necessary if you&rsquo;re up-to-date.</p>
+<div class="ct-example-row">
+<div class="bd-example">
+<div class="container">
+<div class="row">
+<div class="col"><span>Column</span></div>
+<div class="col"><span>Column</span></div>
+<div class="w-100"></div>
+<div class="col"><span>Column</span></div>
+<div class="col"><span>Column</span></div>
+</div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-100&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Column<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div>
+<h3 id="setting-one-column-width">Setting one column width</h3>
+<p>Auto-layout for flexbox grid columns also means you can set the width of one column and have the sibling columns automatically resize around it. You may use predefined grid classes (as shown below), grid mixins, or inline widths. Note that the other columns will resize no matter the width of the center column.</p>
+<div class="ct-example-row">
+<div class="bd-example">
+<div class="container">
+<div class="row">
+<div class="col">
+<span>1 of 3</span>
+</div>
+<div class="col-6">
+<span>2 of 3 (wider)</span>
+</div>
+<div class="col">
+<span>3 of 3</span>
+</div>
+</div>
+<div class="row">
+<div class="col">
+<span>1 of 3</span>
+</div>
+<div class="col-5">
+<span>2 of 3 (wider)</span>
+</div>
+<div class="col">
+<span>3 of 3</span>
+</div>
+</div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>1 of 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-6&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>2 of 3 (wider)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>3 of 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>1 of 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-5&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>2 of 3 (wider)<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>3 of 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div>
+<h3 id="variable-width-content">Variable width content</h3>
+<p>Use <code>col-{breakpoint}-auto</code> classes to size columns based on the natural width of their content.</p>
+<div class="ct-example-row">
+<div class="bd-example">
+<div class="container">
+<div class="row justify-content-md-center">
+<div class="col col-lg-2">
+<span>1 of 3</span>
+</div>
+<div class="col-md-auto">
+<span>Variable width content</span>
+</div>
+<div class="col col-lg-2">
+<span>3 of 3</span>
+</div>
+</div>
+<div class="row">
+<div class="col">
+<span>1 of 3</span>
+</div>
+<div class="col-md-auto">
+<span>Variable width content</span>
+</div>
+<div class="col col-lg-2">
+<span>3 of 3</span>
+</div>
+</div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row justify-content-md-center&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col col-lg-2&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>1 of 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-auto&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Variable width content<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col col-lg-2&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>3 of 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>1 of 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-md-auto&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Variable width content<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col col-lg-2&#34;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>3 of 3<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div>
+<h3 id="equal-width-multi-row">Equal-width multi-row</h3>
+<p>Create equal-width columns that span multiple rows by inserting a <code>.w-100</code> where you want the columns to break to a new line. Make the breaks responsive by mixing the <code>.w-100</code> with some responsive display utilities.</p>
+<div class="ct-example-row">
+<div class="bd-example">
+<div class="row">
+<div class="col"><span>col</span></div>
+<div class="col"><span>col</span></div>
+<div class="w-100"></div>
+<div class="col"><span>col</span></div>
+<div class="col"><span>col</span></div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;w-100&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div>
+<h2 id="responsive-classes">Responsive classes</h2>
+<p>Bootstrap&rsquo;s grid includes five tiers of predefined classes for building complex responsive layouts. Customize the size of your columns on extra small, small, medium, large, or extra large devices however you see fit.</p>
+<h3 id="all-breakpoints">All breakpoints</h3>
+<p>For grids that are the same from the smallest of devices to the largest, use the <code>.col</code> and <code>.col-*</code> classes. Specify a numbered class when you need a particularly sized column; otherwise, feel free to stick to <code>.col</code>.</p>
+<div class="ct-example-row">
+<div class="bd-example">
+<div class="row">
+<div class="col"><span>col</span></div>
+<div class="col"><span>col</span></div>
+<div class="col"><span>col</span></div>
+<div class="col"><span>col</span></div>
+</div>
+<div class="row">
+<div class="col-8"><span>col-8</span></div>
+<div class="col-4"><span>col-4</span></div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-8&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col-8<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-4&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col-4<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div>
+<h3 id="stacked-to-horizontal">Stacked to horizontal</h3>
+<p>Using a single set of <code>.col-sm-*</code> classes, you can create a basic grid system that starts out stacked and becomes horizontal at the small breakpoint (<code>sm</code>).</p>
+<div class="ct-example-row">
+<div class="bd-example">
+<div class="row">
+<div class="col-sm-8"><span>col-sm-8</span></div>
+<div class="col-sm-4"><span>col-sm-4</span></div>
+</div>
+<div class="row">
+<div class="col-sm"><span>col-sm</span></div>
+<div class="col-sm"><span>col-sm</span></div>
+<div class="col-sm"><span>col-sm</span></div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm-8&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col-sm-8<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm-4&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col-sm-4<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col-sm<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col-sm<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-sm&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>col-sm<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div>
+<h3 id="mix-and-match">Mix and match</h3>
+<p>Don&rsquo;t want your columns to simply stack in some grid tiers? Use a combination of different classes for each tier as needed. See the example below for a better idea of how it all works.</p>
+<div class="ct-example-row">
+<div class="bd-example">
+
+<div class="row">
+<div class="col-12 col-md-8"><span>.col-12 .col-md-8</span></div>
+<div class="col-6 col-md-4"><span>.col-6 .col-md-4</span></div>
+</div>
+
+<div class="row">
+<div class="col-6 col-md-4"><span>.col-6 .col-md-4</span></div>
+<div class="col-6 col-md-4"><span>.col-6 .col-md-4</span></div>
+<div class="col-6 col-md-4"><span>.col-6 .col-md-4</span></div>
+</div>
+
+<div class="row">
+<div class="col-6"><span>.col-6</span></div>
+<div class="col-6"><span>.col-6</span></div>
+</div>
+</div><div class="highlight"><pre class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- Stack the columns on mobile by making one full-width and the other half-width --&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-12 col-md-8&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>.col-12 .col-md-8<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-6 col-md-4&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>.col-6 .col-md-4<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop --&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-6 col-md-4&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>.col-6 .col-md-4<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-6 col-md-4&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>.col-6 .col-md-4<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-6 col-md-4&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>.col-6 .col-md-4<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="c">&lt;!-- Columns are always 50% wide, on mobile and desktop --&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;row&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-6&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>.col-6<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;col-6&#34;</span><span class="p">&gt;&lt;</span><span class="nt">span</span><span class="p">&gt;</span>.col-6<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span></code></pre></div>
+</div>
+</main>
+<div class="col-lg-3 bd-sidebar">
+<nav class="bd-toc bd-links mb-5 text-muted list-style-none" aria-label="Secondary navigation">
+<nav id="TableOfContents">
+<ul>
+<li><a href="#how-it-works">How it works</a></li>
+<li><a href="#grid-options">Grid options</a></li>
+<li><a href="#auto-layout-columns">Auto-layout columns</a>
+<ul>
+<li><a href="#equal-width">Equal-width</a></li>
+<li><a href="#setting-one-column-width">Setting one column width</a></li>
+<li><a href="#variable-width-content">Variable width content</a></li>
+<li><a href="#equal-width-multi-row">Equal-width multi-row</a></li>
+</ul>
+</li>
+<li><a href="#responsive-classes">Responsive classes</a>
+<ul>
+<li><a href="#all-breakpoints">All breakpoints</a></li>
+<li><a href="#stacked-to-horizontal">Stacked to horizontal</a></li>
+<li><a href="#mix-and-match">Mix and match</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</nav>
+</div>
+</div>
+</div>
+<footer class="bd-footer p-3 pt-5 p-md-5 mt-5 bg-secondary text-center">
+<div class="container">
+<p class="font-small mb-4">Joint production by:</p>
+<div class="d-flex justify-content-center">
+<a href="https://themesberg.com/?ref=creative-tim" class="mr-4" target="_blank">
+<img src="../../assets/brand/themesberg.svg" class="mb-3" height="40" alt="Themesberg Logo">
+<span class="d-block">Themesberg</span>
+</a>
+<a href="https://creative-tim.com/" target="_blank">
+<img src="../../assets/brand/creative-tim-circle.png" class="mb-3" height="41" alt="Creative Tim Logo">
+<span class="d-block">Creative Tim</span>
+</a>
+</div>
+<hr>
+<ul class="bd-footer-links mb-2">
+<li class="mr-3"><a href="https://www.creative-tim.com/templates" target="_blank">Products</a></li>
+<li class="mr-3"><a href="https://www.creative-tim.com/blog" target="_blank">Blog</a></li>
+<li class="mr-3"><a href="https://www.creative-tim.com/presentation" target="_blank">About</a></li>
+<li><a href="https://www.creative-tim.com/contact-us" target="_blank">Contact</a></li>
+</ul>
+</div>
+</footer>
+<script src="../../../../../cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="../../../../../cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="../../../../../cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+<script src="../../dist/js/bootstrap.min.js"></script>
+<script src="../../assets-db/vendor/headroom.js/dist/headroom.min.js"></script>
+<script src="../../assets-db/vendor/js-cookie/js.cookie.js"></script>
+<script src="../../assets-db/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+<script src="../../assets-db/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+<script src="../../assets-db/vendor/moment.min.js"></script>
+<script src="../../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+<script src="../../assets-db/vendor/nouislider/distribute/nouislider.min.js"></script>
+<script src="../../assets-db/js/dashboard.js"></script>
+<script src="../../assets-db/js/demo.min.js"></script>
+<script src="../../assets/js/docs.min.js"></script>
+</body>
+
+<!-- Mirrored from demos.creative-tim.com/impact-design-system-pro/docs/dashboard/grid/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 21 May 2022 14:53:31 GMT -->
+</html>
